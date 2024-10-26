@@ -16,7 +16,7 @@ importers:
         version: 4.6.6
       honox:
         specifier: ^0.1.26
-        version: 0.1.26(hono@4.6.6)(wrangler@3.81.0)
+        version: 0.1.26(hono@4.6.6)(miniflare@3.20241011.0)(wrangler@3.81.0(@cloudflare/workers-types@4.20241018.0))
       remark-frontmatter:
         specifier: ^5.0.0
         version: 5.0.0
@@ -32,10 +32,13 @@ importers:
         version: 1.1.0(hono@4.6.6)
       '@hono/vite-dev-server':
         specifier: ^0.15.1
-        version: 0.15.2(hono@4.6.6)(wrangler@3.81.0)
+        version: 0.15.2(hono@4.6.6)(miniflare@3.20241011.0)(wrangler@3.81.0(@cloudflare/workers-types@4.20241018.0))
+      '@natsuneko-laboratory/honox-mdx-island':
+        specifier: ^0.1.1
+        version: 0.1.1(@mdx-js/mdx@3.1.0(acorn@8.13.0))(vite@5.4.9(@types/node@22.7.8))
       vite:
         specifier: ^5.2.12
-        version: 5.4.9
+        version: 5.4.9(@types/node@22.7.8)
       wrangler:
         specifier: ^3.57.2
         version: 3.81.0(@cloudflare/workers-types@4.20241018.0)
@@ -487,6 +490,12 @@ packages:
     resolution: {integrity: sha512-q4xOtUXpCzeouE8GaJ8StT4rDxm/U5j6lkMHL2srb2Q3Y7cobE0aXyPzXVVlbeIMBi+5R5MpbiaVE5/vJUdnHg==}
     peerDependencies:
       rollup: '>=2'
+
+  '@natsuneko-laboratory/honox-mdx-island@0.1.1':
+    resolution: {integrity: sha512-NofScpBRSeMZcNmOgHEWyv3fnOQ1Mnu7LBnGRBeWRBzi9Nmf3y2KYQuCMMpcgZz83G47z7IT2tjfNJot8DCrMA==}
+    peerDependencies:
+      '@mdx-js/mdx': ^3.1.0
+      vite: 5.4.9
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1829,18 +1838,22 @@ snapshots:
     dependencies:
       hono: 4.6.6
 
-  '@hono/vite-dev-server@0.15.2(hono@4.6.6)(wrangler@3.81.0)':
+  '@hono/vite-dev-server@0.15.2(hono@4.6.6)(miniflare@3.20241011.0)(wrangler@3.81.0(@cloudflare/workers-types@4.20241018.0))':
     dependencies:
       '@hono/node-server': 1.13.2(hono@4.6.6)
       hono: 4.6.6
       minimatch: 9.0.5
+    optionalDependencies:
+      miniflare: 3.20241011.0
       wrangler: 3.81.0(@cloudflare/workers-types@4.20241018.0)
 
-  '@hono/vite-dev-server@0.16.0(hono@4.6.6)(wrangler@3.81.0)':
+  '@hono/vite-dev-server@0.16.0(hono@4.6.6)(miniflare@3.20241011.0)(wrangler@3.81.0(@cloudflare/workers-types@4.20241018.0))':
     dependencies:
       '@hono/node-server': 1.13.2(hono@4.6.6)
       hono: 4.6.6
       minimatch: 9.0.5
+    optionalDependencies:
+      miniflare: 3.20241011.0
       wrangler: 3.81.0(@cloudflare/workers-types@4.20241018.0)
 
   '@jridgewell/gen-mapping@0.3.5':
@@ -1906,6 +1919,14 @@ snapshots:
       - acorn
       - supports-color
 
+  '@natsuneko-laboratory/honox-mdx-island@0.1.1(@mdx-js/mdx@3.1.0(acorn@8.13.0))(vite@5.4.9(@types/node@22.7.8))':
+    dependencies:
+      '@mdx-js/mdx': 3.1.0(acorn@8.13.0)
+      precinct: 12.1.2
+      vite: 5.4.9(@types/node@22.7.8)
+    transitivePeerDependencies:
+      - supports-color
+
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -1923,6 +1944,7 @@ snapshots:
       '@types/estree': 1.0.6
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    optionalDependencies:
       rollup: 4.24.0
 
   '@rollup/rollup-android-arm-eabi@4.24.0':
@@ -2023,6 +2045,7 @@ snapshots:
       minimatch: 9.0.5
       semver: 7.6.3
       ts-api-utils: 1.3.0(typescript@5.6.3)
+    optionalDependencies:
       typescript: 5.6.3
     transitivePeerDependencies:
       - supports-color
@@ -2485,13 +2508,13 @@ snapshots:
 
   hono@4.6.6: {}
 
-  honox@0.1.26(hono@4.6.6)(wrangler@3.81.0):
+  honox@0.1.26(hono@4.6.6)(miniflare@3.20241011.0)(wrangler@3.81.0(@cloudflare/workers-types@4.20241018.0)):
     dependencies:
       '@babel/generator': 7.25.6
       '@babel/parser': 7.25.6
       '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
-      '@hono/vite-dev-server': 0.16.0(hono@4.6.6)(wrangler@3.81.0)
+      '@hono/vite-dev-server': 0.16.0(hono@4.6.6)(miniflare@3.20241011.0)(wrangler@3.81.0(@cloudflare/workers-types@4.20241018.0))
       hono: 4.6.6
       jsonc-parser: 3.3.1
       precinct: 12.1.2
@@ -3263,12 +3286,13 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@5.4.9:
+  vite@5.4.9(@types/node@22.7.8):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
       rollup: 4.24.0
     optionalDependencies:
+      '@types/node': 22.7.8
       fsevents: 2.3.3
 
   workerd@1.20241011.1:
@@ -3283,7 +3307,6 @@ snapshots:
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@cloudflare/workers-shared': 0.6.0
-      '@cloudflare/workers-types': 4.20241018.0
       '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
       '@esbuild-plugins/node-modules-polyfill': 0.2.2(esbuild@0.17.19)
       blake3-wasm: 2.1.5
@@ -3300,6 +3323,7 @@ snapshots:
       workerd: 1.20241011.1
       xxhash-wasm: 1.0.2
     optionalDependencies:
+      '@cloudflare/workers-types': 4.20241018.0
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil

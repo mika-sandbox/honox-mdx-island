@@ -19,6 +19,7 @@
     "@cloudflare/workers-types": "^4.20240529.0",
     "@hono/vite-build": "^1.0.0",
     "@hono/vite-dev-server": "^0.15.1",
+    "@natsuneko-laboratory/honox-mdx-island": "^0.1.1",
     "vite": "^5.2.12",
     "wrangler": "^3.57.2"
   }
