@@ -12,6 +12,7 @@
     "@mdx-js/rollup": "^3.1.0",
     "hono": "^4.6.6",
     "honox": "^0.1.26",
+    "precinct": "^12.1.2",
     "remark-frontmatter": "^5.0.0",
     "remark-mdx-frontmatter": "^5.0.0"
   },
@@ -19,6 +20,7 @@
     "@cloudflare/workers-types": "^4.20240529.0",
     "@hono/vite-build": "^1.0.0",
     "@hono/vite-dev-server": "^0.15.1",
+    "@mdx-js/mdx": "^3.1.0",
     "@natsuneko-laboratory/honox-mdx-island": "^0.1.1",
     "vite": "^5.2.12",
     "wrangler": "^3.57.2"

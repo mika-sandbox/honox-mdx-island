@@ -17,6 +17,9 @@ importers:
       honox:
         specifier: ^0.1.26
         version: 0.1.26(hono@4.6.6)(miniflare@3.20241011.0)(wrangler@3.81.0(@cloudflare/workers-types@4.20241018.0))
+      precinct:
+        specifier: ^12.1.2
+        version: 12.1.2
       remark-frontmatter:
         specifier: ^5.0.0
         version: 5.0.0
@@ -33,6 +36,9 @@ importers:
       '@hono/vite-dev-server':
         specifier: ^0.15.1
         version: 0.15.2(hono@4.6.6)(miniflare@3.20241011.0)(wrangler@3.81.0(@cloudflare/workers-types@4.20241018.0))
+      '@mdx-js/mdx':
+        specifier: ^3.1.0
+        version: 3.1.0(acorn@8.13.0)
       '@natsuneko-laboratory/honox-mdx-island':
         specifier: ^0.1.1
         version: 0.1.1(@mdx-js/mdx@3.1.0(acorn@8.13.0))(vite@5.4.9(@types/node@22.7.8))
@@ -2059,7 +2065,7 @@ snapshots:
 
   '@vue/compiler-core@3.5.12':
     dependencies:
-      '@babel/parser': 7.25.6
+      '@babel/parser': 7.25.8
       '@vue/shared': 3.5.12
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -2072,7 +2078,7 @@ snapshots:
 
   '@vue/compiler-sfc@3.5.12':
     dependencies:
-      '@babel/parser': 7.25.6
+      '@babel/parser': 7.25.8
       '@vue/compiler-core': 3.5.12
       '@vue/compiler-dom': 3.5.12
       '@vue/compiler-ssr': 3.5.12
@@ -2955,7 +2961,7 @@ snapshots:
 
   node-source-walk@7.0.0:
     dependencies:
-      '@babel/parser': 7.25.6
+      '@babel/parser': 7.25.8
 
   normalize-path@3.0.0: {}
 
